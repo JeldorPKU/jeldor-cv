@@ -18,20 +18,23 @@
 \usepackage{CJKutf8}
 
 % 调整版心
-\usepackage[scale=0.8]{geometry}
+\usepackage[top=1.5cm,bottom=1.5cm,left=1.6cm,right=1.6cm]{geometry}
 %\setlength{\hintscolumnwidth}{3cm}           % 如果你希望改变日期栏的宽度
 
+\renewcommand*{\namefont}{\fontsize{28}{20}\rmfamily\bfseries\upshape}
+\renewcommand*{\addressfont}{\fontsize{14}{14}\mdseries\upshape}
+
 % 个人信息
-\name{蒋}{雨蒙}
+\name{}{蒋雨蒙}
 %\title{简历题目 (可选项)}                     % 可选项、如不需要可删除本行
-\address{海淀区海淀路52号王克桢楼1619}{100871 北京}            % 可选项、如不需要可删除本行
+%\address{海淀区颐和园路5号北京大学42楼612}{100871 北京}            % 可选项、如不需要可删除本行
 \phone[mobile]{+86~156~0106~4647}              % 可选项、如不需要可删除本行
 \email{jeldor@pku.edu.cn}                    % 可选项、如不需要可删除本行
 %\homepage{www.xialongli.com}                  % 可选项、如不需要可删除本行
 %\extrainfo{附加信息 (可选项)}                 % 可选项、如不需要可删除本行
 \social[github]{JeldorPKU}
-\sethintscolumntowidth{2012.09 -- 2016.7}
-\photo[64pt][0.4pt]{picture}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
+\sethintscolumntowidth{2012.9 -- 2016.7}
+\photo[50pt][0.4pt]{picture}                  % ‘64pt’是图片必须压缩至的高度、‘0.4pt‘是图片边框的宽度 (如不需要可调节至0pt)、’picture‘ 是图片文件的名字;可选项、如不需要可删除本行
 %\quote{引言(可选项)}                          % 可选项、如不需要可删除本行
 
 % 显示索引号;仅用于在简历中使用了引言
@@ -48,41 +51,64 @@
 \begin{document}
 \begin{CJK}{UTF8}{gbsn}                       % 详情参阅CJK文件包
 \maketitle
-
-\vspace{-1cm}
+\vspace{-1.5cm}
 \section{教育背景}
-\cventry{2012.9 -- 2016.7}{理学学士}{北京大学心理学系}{北京}{\textit{GPA 3.50}}{}  % 第3到第6编码可留白
-\cventry{2016.9 至今}{硕士研究生}{北京大学心理与认知科学学院}{北京}{}{基础心理学专业认知神经科学方向，主要领域为时间知觉。}
+\cventry{2016.9 -- 2019.7}{基础心理学硕士}{北京大学心理与认知科学学院}{}{排名4/18}{}%基础心理学专业认知神经科学方向，主要研究领域为时间知觉。}
+\cventry{2012.9 -- 2016.7}{理学学士}{北京大学心理学系}{}{\textit{GPA 3.50/4}}{}  % 第3到第6编码可留白
 
 %\section{毕业论文}
 %\cvitem{题目}{\emph{题目}}
 %\cvitem{导师}{导师}
 %\cvitem{说明}{\small 论文简介}
 
-\section{个人经历}
+\section{项目经历}
+\cventry{2017.4--2017.11}{滴滴出行}{地图事业部}{产品实习生}{}{%
+\begin{itemize}
+  \item 负责拼车非首单路口分派单项目，解决部分情况下司机带乘客绕路的问题。从北京和广州的147万拼车订单筛选出22万目标订单，并用R进行可视化分析呈现问题。与大数据和研发部门的同事深度合作，完成新策略的制订和开发。目前新的派单策略已经上线实验，准确命中相关问题并初见成效。
+  \item 负责智慧交通“一键上报”项目，通过调研用户投诉，确定上报问题和交通事件的种类，设计针对司机与乘客的不同交互界面，并用Sketch绘制相关界面的线框图，与前端设计和开发部门的同事合作完成上线。为增加上报数量和有效率，制作司机教育课件并向全国500万司机推送。
+  \item 深度参与滴滴车主App的测试工作。处理用户反馈的体验问题，对数百个案例进行研究，找出问题出现的环节及原因。主持多项拼车相关的基础调研工作，包括拼车接送顺序、算路引擎评估等。使用Excel数据透视表对多项线上实验进行天级结果统计更新。独立使用SQL进行了多次数据提取和并用R进行数据挖掘。
+\end{itemize}}
+\cventry{2016.11 至今}{北京大学}{PKU Helper 后端组}{}{}{PKU Helper是一款由学生自己开发，提供网关连接、成绩查询、课表查询等强大功能的校园App。目前已有约3万用户，覆盖约75\%的北大学生。Android和iOS客户端下载量均接近2万。
+\begin{itemize}
+      \item 使用PHP爬虫定时从教务网站爬取每周的教室占用情况，并解析成可用的json数据返回给前端，从而提供教室占用情况的查询功能。其使用率在PKU Helper所有功能中排名前三。
+      \item 制作PKU Helper用户活跃情况的数据分析报告，可以查看指定时间内学生使用App的情况，为学校信息服务建设提供助力。
+    \end{itemize}}
+\cventry{2015.3 至今}{北京大学自行车协会}{网络组组长}{}{}{%
+\begin{itemize}
+  \item 2015年初，独立完成全国高校山地车交流赛报名网站的后端及部分前端开发工作。2016年初，改进原有的网站功能，增加工作人员后台操作界面。到目前为止，该网站是全国高校自主举办的自行车比赛中仅有的网络报名平台，每年准确收集150多所高校1000余人的数据，大大提高了信息采集和处理的效率，获得参赛高校的一致好评。
+  \end{itemize}}
+%\cventry{2014.9 至今}{北京大学自行车协会}{网络组组长}{}{}{%
+%\begin{itemize}
+%  \item 负责协会论坛 (https://www.chexie.net/) 的日常维护。接受用户反馈并改进相关功能。
+%  \item 目前正在使用 Flask 框架重构原有论坛，并加入新的功能。
+%\end{itemize}
+%}
+%\cventry{2013.9 -- 2014.8}{北京大学自行车协会}{主席}{}{}{组建执委会组织日常工作，负责筹备暑期成果交流会及暑期远征队员选拔。同时担任2014年暑期远征短途骑行团团长。}
 
-\cventry{2012.9 -- 2014.6}{北京大学心理学系学生会}{文体部干事}{}{}{参与组织元旦晚会、体育比赛等院系文体活动。}
-\cventry{2013.9 -- 2014.8}{北京大学自行车协会}{主席团成员、理事}{}{}{组建执委会组织日常工作，负责筹备暑期成果交流会及暑期远征队员选拔。同时担任2014年暑期远征短途骑行团团长。}
-\cventry{2014.9 至今}{北京大学自行车协会}{网络组组长}{}{}{负责协会论坛的日常维护。2015年带头编写了全国高校山地车交流赛报名网站，并负责后续开发与维护。}
-\cventry{2015.9 至今}{北京大学}{助教}{}{}{担任计算概论助教，负责C语言编程的上机课程。同时担任心理学概论助教。}
-
-\section{获得奖励}
-\cvdoubleitem{2013.7}{北京大学李彦宏奖学金}{2013.8}{北京大学军训优秀学员}
-\cvdoubleitem{2014.7}{北京大学三好学生}{2016.5}{ACM 程序设计竞赛三等奖}
-
-\section{语言技能}
-\cvitemwithcomment{英语}{TOEFL 107}{能够流利地用英语与他人交流，并可以无障碍进行阅读与写作。}
+%\section{项目经历}
+%\cvitem
 
 \section{计算机技能}
-\cvitem{C/C++}{能熟练运用 C/C++ 实现简单算法并解决批处理问题。}
-\cvitem{Matlab/R}{能熟练进行数据处理与可视化。}
-\cvitem{\LaTeX}{能熟练使用 \LaTeX 进行一般文档的排版工作。}
-\cvitem{MS Office}{会使用 Word、 Excel、 Powerpoint完成文书工作。}
-\cvitem{Web}{熟悉 LAMP/LNMP 架构的网站建设，熟悉 Bootstrap 前端框架，会使用 JavaScript (jQuery)。曾用 CodeIgniter (PHP) 和 Flask (Python) 框架编写网站。}
-\cvitem{Linux}{熟悉 Linux 命令行操作，会编写简单的 Shell 脚本。}
+\cvitem{R}{擅长使用R进行大批量数据分析与可视化。曾在Coursera上完成三门相关课程。}
+\cvitem{SQL}{掌握数据库的增删改查操作，能够独立完成数据关联查询。}
+\cvitem{Microsoft Office}{熟练运用Word、Excel、Powerpoint。精通Excel数据透视表。}
+\cvitem{C/C++}{熟练运用C/C++实现解决批处理问题，如从海量文本中提取并整理数据。}
+\cvitem{其他}{熟悉Matlab、Python、PHP、JavaScript、Shell等编程语言，了解机器学习基础知识。}
+%\cvitem{Wind}{掌握基本操作，会使用 Wind 查找及提取数据。}
+%\cvitem{Web}{熟悉 LAMP/LNMP 架构的网站建设，熟悉 Bootstrap 前端框架，会使用 JavaScript (jQuery)。曾用 CodeIgniter (PHP) 和 Flask (Python) 框架编写网站。}
+%\cvitem{Linux}{熟悉 Linux 命令行操作，会编写简单的 Shell 脚本。}
+
+\section{奖励表彰}
+%\cvdoubleitem{}{北京大学李彦宏奖学金}{}{北京大学学业奖学金}%{2013.8}{北京大学军训优秀学员}
+%\cvdoubleitem{}{北京大学三好学生}{}{}
+\cvitem{}{北京大学李彦宏奖学金；北京大学三好学生；北京大学五四奖学金（4\%）；}
+
+\section{语言技能}
+\cvitem{英语}{TOEFL 107，六级 587；能够无障碍进行听说读写。}
 
 \section{个人兴趣}
-\cvdoubleitem{骑行}{\small 曾两次参与北大车协暑期远征，累计骑行10000公里以上。}{计算机编程}{\small 两次参与 ACM 并曾获三等奖。自学了 Python、R 等编程语言。}
+\cvitem{骑行}{曾两次参与北大车协暑期远征，累计骑行1万公里以上；}
+\cvitem{摄影}{北京大学青年摄影协会拾光小组成员；}%{计算机编程}{\small 两次参与 ACM 并曾获三等奖。自学了 Python、R 等编程语言。}
 
 % 来自BibTeX文件但不使用multibib包的出版物
 %\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% BibTeX的数字标签

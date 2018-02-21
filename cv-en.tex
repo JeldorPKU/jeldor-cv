@@ -27,7 +27,7 @@
 % personal data
 \name{Yumeng}{Jiang}
 % \title{Resumé title}                               % optional, remove / comment the line if not wanted
-\address{Room 1619, 52 Haidian Rd.}{100871 Beijing}{China}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
+\address{Room 612, Building 42, 5 Yiheyuan Rd.}{100871 Beijing}{China}% optional, remove / comment the line if not wanted; the "postcode city" and "country" arguments can be omitted or provided empty
 \phone[mobile]{+86~156~0106~4647}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
 % \phone[fixed]{+2~(345)~678~901}
 % \phone[fax]{+3~(456)~789~012}
@@ -55,12 +55,30 @@
 \begin{document}
 %\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
 %-----       resume       ---------------------------------------------------------
+\vspace{-0.7cm}
+
 \makecvtitle
 
-\vspace{-1cm}
+\vspace{-1.4cm}
 \section{Education}
-\cventry{2012.9--2016.7}{Bachelor}{Department of Psychology, Peking University}{Beijing}{\textit{GPA 3.50}}{}  % arguments 3 to 6 can be left empty
-\cventry{2016.9--now}{Master}{School of Psychology and Cognitive Sciences, Peking University}{Beijing}{}{In school.}
+\cventry{2012.9--2016.7}{Bachelor}{Department of Psychology, Peking University}{Beijing}{\textit{GPA 3.50/4}}{}  % arguments 3 to 6 can be left empty
+\cventry{2016.9--2019.7 (Expected)}{Master}{School of Psychology and Cognitive Sciences, Peking University}{Beijing}{}{In school. Major in cognitive neuroscience, doing research on time perception.}
+
+\section{Projects}
+\cventry{2014.9--present}{Cycling Association of Peking University}{Leader of Network Department}{}{}{%
+\begin{itemize}
+  \item Maintained the forum of CAPU. Listened to users' advices and improve the forum.
+  \item Now reconstructing the current forum using Flask, adding more useful features.
+\end{itemize}
+}
+\cventry{2015.3--present}{Cycling Association of Peking University}{National Cycling Competition for College Students}{}{}{%
+\begin{itemize}
+  \item Established the back-end and part of the front-end of the registration system independently in early 2015.
+  \item Improved the website in early 2016. Added more features for the administrators to manipulate data and get information.
+  \item In 2015, the system accurately collected information of over 800 contestants. In 2016, this number increased to 1000.
+  \item This is the only online registration system of cycling race held by college students nationwide. It has made registration more convenient and error-free.
+\end{itemize}}
+\cventry{2016.11--present}{Peking University}{Back-end group of PKU Helper}{}{}{Worked as a developer of the back-end. Designed an API for classroom information query. \emph{PKU Helper} is a campus App used by thousands of students in PKU.}
 
 %\section{Undergraduate thesis}
 %\cvitem{title}{\emph{The Influence of Temporal Context on Time Perception}}
@@ -71,17 +89,18 @@
 %\cventry{year--year}{Job title}{Employer}{City}{}{General description no longer than 1--2 lines.\newline{}%
 %
 \section{Languages}
-\cvitemwithcomment{English}{TOEFL 107}{}
+\cvitemwithcomment{English}{TOEFL 107}{Fluent in English.}
 
-\section{Computer skills}
-\cvdoubleitem{category 1}{XXX, YYY, ZZZ}{category 4}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 2}{XXX, YYY, ZZZ}{category 5}{XXX, YYY, ZZZ}
-\cvdoubleitem{category 3}{XXX, YYY, ZZZ}{category 6}{XXX, YYY, ZZZ}
+\section{Technical skills}
+\cvitem{C/C++}{Ablility to use C/C++ to write simple algorithms and to accomplish routine tasks.}
+\cvitem{Matlab/R}{Proficient with Matlab and R to clean and visualize data.}
+%\cvitem{\LaTeX}{Able to use \LaTeX to typeset simple documentations.}
+%\cvitem{MS Office}{会使用 Word、 Excel、 Powerpoint完成文书工作。}
+\cvitem{Web}{Capable of using LAMP/LNMP to establish a website. Ability to use Bootstrap front-end framework and JavaScript (jQuery). Experience with CodeIgniter (PHP) and Flask (Python) on building websites.}
+\cvitem{Linux}{Capable of Linux command line tools. Ability to write simple shell scripts.}
 
 \section{Interests}
-\cvitem{hobby 1}{Description}
-\cvitem{hobby 2}{Description}
-\cvitem{hobby 3}{Description}
+\cvdoubleitem{Cycling}{Cycled over 10000 km.}{Programming}{Taught myself R and Python.}
 
 %\section{Extra 1}
 %\cvlistitem{Item 1}
